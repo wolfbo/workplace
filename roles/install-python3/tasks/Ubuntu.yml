@@ -16,6 +16,7 @@
     pkg: "{{ packages }}"
     state: present
 
-- name: Install foo
+- name: Install snaps
   snap:
     name: "{{ snaps }}"
+    classic: yes
