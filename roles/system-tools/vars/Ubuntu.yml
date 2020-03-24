@@ -1,0 +1,8 @@
+---
+
+packages:
+  - htop
+  - net-tools
+  - inetutils-traceroute
+  - dnsutils
+

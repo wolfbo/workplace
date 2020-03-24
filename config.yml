@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+  - name: Copy file with owner and permissions
+    copy:
+      src: bashrc
+      dest: "~/.bashrc"
+      mode: '0644'
+

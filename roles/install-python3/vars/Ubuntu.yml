@@ -1,0 +1,8 @@
+---
+
+packages:
+  - python3.7
+  - python3.7-distutils
+
+snaps:
+  - pycharm-community

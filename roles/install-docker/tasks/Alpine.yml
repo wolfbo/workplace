@@ -1,0 +1,10 @@
+---
+
+- name: Install Docker
+  apk:
+    name: "docker"
+    state: latest
+    update_cache: yes
+
+- name: install pip3packages pip3
+  shell: "$(/usr/bin/env python3) /usr/bin/pip install docker-compose"

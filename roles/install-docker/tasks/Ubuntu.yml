@@ -1,0 +1,32 @@
+---
+
+- name: Install the docker packages 
+  apt: name=docker.io state=present update_cache=yes
+  when: ansible_distribution_major_version == "18"
+
+- name: add apt-key for docker repo
+  apt_key: url=https://download.docker.com/linux/ubuntu/gpg state=present
+  when: ansible_distribution_major_version == "16"
+
+- name: add docker repo
+  apt_repository: repo='deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable' state=present
+  register: dockerrepo
+  when: ansible_distribution_major_version == "16"
+
+- name: "Install the docker packages"
+  apt:
+    update_cache: yes
+    pkg: "{{ packages }}"
+    state: present
+  when: ansible_distribution_major_version == "16"
+
+  
+- name: Install the chrony packages 
+  apt: name=chrony state=present update_cache=yes
+
+- name: Install pip packages
+  pip: 
+    name: 
+      - "docker-compose"
+    state: present
+

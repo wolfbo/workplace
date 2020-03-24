@@ -1,0 +1,13 @@
+---
+
+#- name: Add nginx repository
+#  yum_repository:
+#    name: nginx
+#    description: nginx YUM repo
+#    gpgcheck: no
+#    baseurl: http://nginx.org/packages/{{ ansible_distribution|lower }}/{{ ansible_distribution_major_version }}/$basearch/
+
+- name: Install the packages 
+  yum: name={{ item }} state="present"
+  with_items: "{{ packages }}"
+

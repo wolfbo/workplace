@@ -1,0 +1,12 @@
+---
+
+
+#- name: Add nginx repository
+#  zypper_repository:
+#    name: nginx
+#    repo: "http://nginx.org/packages/sles/12/"
+#    state: present
+
+- name: Install the packages 
+  zypper: name={{ item }} state="present"
+  with_items: "{{ packages }}"

@@ -1,0 +1,9 @@
+---
+
+
+- name: "Install the python3 packages"
+  apt:
+    update_cache: yes
+    pkg: "{{ packages }}"
+    state: present
+

@@ -1,0 +1,8 @@
+---
+
+
+- name: "Install the apt packages"
+  apt:
+    update_cache: yes
+    pkg: "{{ packages }}"
+    state: present

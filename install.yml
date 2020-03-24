@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  connection: local
+  become: True
+  become_user: root
+  roles:
+    - role: "install-docker"
+    - role: "install-python3"
+    - role: "build-essentials"
+    - role: "system-tools"
+
