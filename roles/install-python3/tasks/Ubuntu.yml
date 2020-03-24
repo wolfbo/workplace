@@ -7,7 +7,8 @@
     update_cache: yes
 
 - name: add python3 (deadsnake) repo
-  apt_repository: ppa:deadsnakes/ppa
+  apt_repository: 
+    repo: ppa:deadsnakes/ppa
 
 - name: "Install the python3 packages"
   apt:
