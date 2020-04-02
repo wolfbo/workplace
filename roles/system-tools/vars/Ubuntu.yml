@@ -5,4 +5,5 @@ packages:
   - net-tools
   - inetutils-traceroute
   - dnsutils
+  - unzip
 
