@@ -169,4 +169,8 @@ function ytdl {
  #youtube-dl --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=${1}"
 }
 
+source <(terraform-docs completion bash)
+
+
+
 ssh-add

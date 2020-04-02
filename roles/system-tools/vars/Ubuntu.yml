@@ -6,4 +6,5 @@ packages:
   - inetutils-traceroute
   - dnsutils
   - unzip
+  - golang-go
 
