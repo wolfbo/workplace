@@ -1,0 +1,9 @@
+---
+
+- name: Copy file with owner and permissions
+  copy:
+    src: paymo
+    dest: /usr/local/bin/paymo
+    owner: root
+    group: root
+    mode: '0755'

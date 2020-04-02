@@ -9,4 +9,5 @@
     - role: "install-python3"
     - role: "build-essentials"
     - role: "system-tools"
+    - role: "paymo"
 
